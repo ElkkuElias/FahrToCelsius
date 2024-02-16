@@ -14,10 +14,16 @@ pipeline {
          bat 'mvn clean verify'
       }
     }
-    stage ('Testing'){
+    stage ('Test'){
       steps{
-        echo 'ok'
+        bat 'mvn test'
       }
+        post{  
+          success{
+              junit '**/target/surefire-reports/TEST-*.xml'
+              jacoco(execPattern: '**/target/jacoco.exec')
     }
   }
+}
+}
 }
