@@ -1,19 +1,19 @@
 pipeline {
   agent any 
   stages{
-    stage ('Initial') {
+    stage ('checkout') {
       steps{
-        echo 'hello Jenkins'
+        git branch: 'master', url: 'https://github.com/ElkkuElias/FahrToCelsius.git'
         }
     }
     stage ('Build'){
       steps{
-        echo 'builded'
+         bat 'mvn clean compile verify'
       }
     }
     stage ('Testing'){
       steps{
-        echo 'test'
+        
       }
     }
   }
