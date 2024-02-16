@@ -6,5 +6,10 @@ pipeline {
         echo 'hello Jenkins'
         }
     }
+    stage ('Build'){
+      steps{
+        echo 'builded'
+      }
+    }
   }
 }
