@@ -1,0 +1,10 @@
+pipeline {
+  agent any 
+  Stages{
+    stage ('Initial') {
+      steps{
+        ehco: 'hello Jenkins'
+        }
+    }
+  }
+}
