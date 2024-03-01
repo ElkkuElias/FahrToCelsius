@@ -11,6 +11,11 @@ public class FahrToCel{
         return  (kel-273.15F);
     }
 
+    public static float kelvintoFarh(double kel){
+        return (float) ((kel-273.15) * (9/5) + 32);
+
+    }
+
 
 }
 

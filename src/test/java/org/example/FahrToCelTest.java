@@ -16,4 +16,10 @@ class FahrToCelTest {
         FahrToCel Converter = new FahrToCel();
         assertEquals(0,Converter.kelvintoCel(273.15F));
     }
+
+    @Test
+    void converKeltoFarTest(){
+        double test = Math.round(FahrToCel.kelvintoFarh(300.1));
+        assertEquals(59.0,test);
+    }
 }
