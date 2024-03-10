@@ -13,8 +13,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout code from Git repository
-                git branch: 'main', url: 'https://github.com/ElkkuElias/FahrToCelsius.git'
+                // Checkout code from Git repositor
+                git 'https://github.com/ElkkuElias/FahrToCelsius.git'
             }
         }
 
